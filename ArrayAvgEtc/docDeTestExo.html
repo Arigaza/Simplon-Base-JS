@@ -1,0 +1,148 @@
+/*
+Définir en JavaScript un tableau contenant des notes d'étudiants comprises entre 0 et 20.
+Implémenter en JavaScript les fonctions qui permettent d'afficher un tel tableau, de savoir combien
+d'étudiants ont eu plus de 10, de calculer la moyenne des notes, de rechercher une note
+particulière
+
+*/
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Premiers algorithmes sur les tableaux</title>
+  <script src="dropDown.js" defer></script>
+  <script src="find student dropdown.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // force only number in text input
+    function onlyNumberKey(evt) {
+
+      // Only ASCII character in that range allowed
+      var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+      if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        return false;
+      return true;
+    }
+
+    /*affiche tableau défini en dur (dans le code) je vous la laisse pour exemple et pur la suite*/
+    function affiche_tableau(t) {
+      document.writeln('<p>le tableau est :</p>');
+      document.writeln('<table border="1"><tr>');
+      for (var i = 0; i < t.length; i++) {
+        document.writeln('<td>', t[i], '</td>');
+      }
+      document.writeln('</tr></table>');
+    }
+
+    /* Calcule et affiche la moyenne des éléments d'un tableau */
+    function affiche_moyenne(t) {
+      var total = 0;
+      var average;
+      for (let i = 0; i < t.length; i++) {
+        total = total + t[i]
+      }
+      average = total / t.length
+      document.writeln('<p>la moyenne de la classe est : ' + average + '/20 </p>');
+    }
+
+    /* Compte et affiche le nombre d'apparitions d'un élément dans un tableau */
+    function occurrences(x, t) {
+      let occurences = 0
+      for (let i = 0; i < t.length; i++) {
+        if (t[i] == x) {
+          occurences++
+        }
+      }
+      document.writeln('<p>Il y a ' + occurences + ' qui ont eut la note de: ' + x + '/20 </p>')
+    }
+
+
+
+
+    /* Compte et affiche combien ont eu 10 ou plus */
+    function onteulamoyenne(t) {
+      haveAvg = 0
+      for (let i = 0; i < t.length; i++) {
+        t[i] >= 10 ? haveAvg++ : NaN
+      }
+      document.writeln('<p>Il y a ' + haveAvg + ' personnes qui ont eut la moyenne </p>')
+    }
+    /* Indique si un élément est présent dans un tableau ou non */
+    function recherche(x, t) {
+      var found = false;
+      for (let i = 0; i < t.length; i++) {
+        if (t[i] == x) {
+          document.writeln('<p>Il y a une où plusieurs notes qui correspondents à ' + x + '/20</p>')
+          found = true
+        }
+      }
+      if (!found) {
+        document.writeln('<p>Il y a aucune note qui correspond à ' + x + '/20</p>')
+      }
+
+    }
+    /* appels aux procédures définies ci-dessus */
+
+    var notes = [5, 12, 8, 20, 10, 8, 8, 14, 15];
+    // var notes = [0, 20]
+    notes[2] = 9;
+
+    function addNotes() {
+      let newnote = document.getElementById("addNotes").value
+      notes.push(newnote)
+      console.log(notes)
+    }
+    affiche_tableau(notes);
+    affiche_moyenne(notes);
+    occurrences(8, notes);
+    occurrences(2, notes);
+    onteulamoyenne(notes);
+    recherche(12, notes);
+    recherche(13, notes);
+  </script>
+
+</head>
+
+<body>
+
+  <div class="form">
+    <label for="addNotes">Enter a new note: </label>
+    <input type="text" maxlength="2" id="addNotes" class="addNotes" onkeypress="return onlyNumberKey(event)">
+    <input type="submit" value="Submit note" class="guessSubmit" onclick="addNotes()">
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">formation</button>
+    <div id="myDropdown" class="dropdown-content">
+      <div class="dropdownButton" onclick="currentStudent(1), showStudent(Henry)">Henry</div>
+      <div class="dropdownButton" onclick="currentStudent(2), showStudent(Chloé)">Chloé</div>
+      <div class="dropdownButton" onclick="currentStudent(3), showStudent(Feti)">Feti</div>
+      <div class="dropdownButton" onclick="currentStudent(4), showStudent(Youcef)">Youcef</div>
+      <div class="dropdownButton" onclick="currentStudent(5), showStudent(Gérard)">Gérard</div>
+    </div>
+  </div>
+  
+
+
+    <div id="Henry" class="Henry"> hello</div>
+    <div class="students Chloé" id="Chloé"></div>
+    <div class="students Feti" id="Feti"></div>
+    <div class="students Youcef" id="Youcef"></div>
+    <div class="students Gerard" id="Gerard"></div>
+</body>
+
+<script>
+  let henryClass = document.getElementsByClassName("Henry")
+  // console.log(henry5)
+  // // for (i = 0; i < henry5.length; i++) {
+  // //   henry5.item(i).textContent = "Note: 10."
+  // //       }
+  let henry5 = document.getElementById("Henry")
+  henry5.textContent = "Note: 15."
+  console.log("henryClass: " + henryClass)
+</script>
+
+</html>

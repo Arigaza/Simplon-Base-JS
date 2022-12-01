@@ -1,0 +1,95 @@
+    div.jeu {
+      height: 520px;
+      width: 520px;
+      margin: 2em auto 2em auto;
+    }
+      /* body {
+        background-color: black;
+      } */
+
+      * {
+        border: none;
+        margin: auto;
+        /* enlever toute les margin/border */
+      }
+
+      #world {
+        padding-top: 10px;
+        /* permet d'espacer les bouton du tableau */
+      }
+
+      table {
+        border-spacing: 30px;
+        /* diminue l'espace entre chaque case */
+      }
+
+      img {
+        object-fit: cover;
+        /* force l'image à recouvrir la case ou c'est l'autre */
+      }
+
+      image {
+        object-fit: cover;
+        /* force l'image à recouvrir la case ou c'est l'autre */
+      }
+
+      td {
+        width: 120px;
+        height: 120px;
+        /* taille de chaque cellule du tableau */
+      }
+
+      td.blue {
+        background-color: blue;
+      }
+
+      td.black {
+        background-color: black;
+      }
+      td.autruche {
+        background-image: url("images/autruche.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.cat {
+        background-image: url("images/chat.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.dog {
+        background-image: url("images/chien.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.pig {
+        background-image: url("images/cochon.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.toad {
+        background-image: url("images/grenouille.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.rabbit {
+        background-image: url("images/lapin.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.boar {
+        background-image: url("images/sanglier.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+
+      td.mouse {
+        background-image: url("images/souris.jpg");
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }

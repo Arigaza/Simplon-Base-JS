@@ -1,0 +1,140 @@
+* {
+    /* border: 0px; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.container {
+    height: 600px;
+    width: 750px;
+    background-color: black;
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 10%;
+    grid-template-rows: repeat(6, 12%);
+    gap: 2% 2%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#result {
+    grid-area: 1 / 1 / 2 / 4;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+}
+
+
+.bigButton, .tinyButton {
+    cursor: pointer;
+    display: inline-block;
+background-color: blue;
+width: 100%;
+height: 65px;
+line-height: 65px;
+border-radius: 5px;
+}
+
+.bigButton:hover, .tinyButton:hover {
+    background-color: aquamarine;
+}
+.pink {
+    background-color: palevioletred;
+}
+.pink:hover {
+    background-color: deeppink;
+}
+
+.bigButton:nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.bigButton:nth-child(3) {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.bigButton:nth-child(4) {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.bigButton:nth-child(5) {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.bigButton:nth-child(6) {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.bigButton:nth-child(7) {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.bigButton:nth-child(8) {
+    grid-area: 4 / 1 / 5 / 2;
+
+}
+
+.bigButton:nth-child(9) {
+    grid-area: 4 / 2 / 5 / 3;
+
+}
+
+.bigButton:nth-child(10) {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.bigButton:nth-child(11) {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.bigButton:nth-child(12) {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.bigButton:nth-child(13) {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.tinyButton:nth-child(14) {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.tinyButton:nth-child(15) {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.tinyButton:nth-child(16) {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.tinyButton:nth-child(17) {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.tinyButton:nth-child(18) {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.duoButton {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    gap: 10%;
+}

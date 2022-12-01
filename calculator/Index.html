@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculette</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="container">
+            <div id="result"></div>
+            <div class="bigButton" onclick="resultAddNumber(1)">1</div>
+            <div class="bigButton" onclick="resultAddNumber(2)">2</div>
+            <div class="bigButton" onclick="resultAddNumber(3)">3</div>
+            <div class="bigButton" onclick="resultAddNumber(4)">4</div>
+            <div class="bigButton" onclick="resultAddNumber(5)">5</div>
+            <div class="bigButton" onclick="resultAddNumber(6)">6</div>
+            <div class="bigButton" onclick="resultAddNumber(7)">7</div>
+            <div class="bigButton" onclick="resultAddNumber(8)">8</div>
+            <div class="bigButton" onclick="resultAddNumber(9)">9</div>
+            <div class="bigButton" onclick="resultAddNumber(`.`)">.</div>
+            <div class="bigButton" onclick="resultAddNumber(0)">0</div>
+            <div class="bigButton pink" onclick="compute()">=</div>
+
+            <div class="tinyButton pink" id="reset" onclick="resetAll()">C</div>
+            <div class="tinyButton" id="divide" onclick="signChange(`/`)">/</div>
+            <div class="tinyButton" id="minus" onclick="signChange(`-`)">-</div>
+            <div class="tinyButton" id="add" onclick="signChange(`+`)">+</div>
+            <div class="tinyButton" id="multiply" onclick="signChange(`*`)">*</div>
+            <div class="bigButton" onclick="removeLastNumber()">Return</div>
+            <div class="bigButton" onclick="signChange(`%`)">%</div>
+            <div class="duoButton">
+                <div class="bigButton" onclick="changeM(`+`)">M+</div>
+                <div class="tinyButton" onclick="changeM(`-`)">M-</div>
+            </div>
+            <div class="bigButton" onclick="displayM()">M</div>
+        </div>
+    </div>
+</body>
+
+</html>
